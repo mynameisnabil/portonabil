@@ -985,7 +985,7 @@ a {
 }
 
 .education-card {
-  flex-basis: calc(50% - 20px); /* Setengah dari lebar parent dengan sedikit margin */
+  flex-basis: calc(50% - 20px); 
   margin-bottom: 20px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -996,7 +996,7 @@ a {
 }
 
 .education-card img {
-  max-width: 250px;
+  max-width: 120px;
   height: auto;
   border-radius: 5px;
   margin-right: 20px;
@@ -1022,3 +1022,20 @@ a {
   font-size: 1.6rem;
   color: #555;
 }
+
+/* Desktop style */
+.education-card {
+  flex-basis: calc(50% - 20px); 
+}
+
+/* Mobile style */
+@media (max-width: 768px) {
+  .education-card {
+    flex-basis: 100%; /* Ubah menjadi 100% agar card penuh lebar */
+  }
+}
+
+
+
+/* Kartu Experience */
+
