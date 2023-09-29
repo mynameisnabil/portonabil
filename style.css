@@ -996,7 +996,7 @@ a {
 }
 
 .education-card img {
-  max-width: 120px;
+  max-width: 150px;
   height: auto;
   border-radius: 5px;
   margin-right: 20px;
@@ -1031,7 +1031,16 @@ a {
 /* Mobile style */
 @media (max-width: 768px) {
   .education-card {
-    flex-basis: 100%; /* Ubah menjadi 100% agar card penuh lebar */
+    flex-basis: 100%;
+    align-items: center;
+  }
+
+  .education-card img {
+    
+    max-width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    margin-right: 20px;;
   }
 }
 
