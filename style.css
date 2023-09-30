@@ -1044,6 +1044,135 @@ a {
   }
 }
 
+/* Kartu Intern */
+
+.intern-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.intern-card {
+  flex-basis: calc(50% - 20px); 
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.intern-card img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.intern-card__info {
+  flex-grow: 1;
+}
+
+.company-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.company-year {
+  font-size: 1.4rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.company-description {
+  font-size: 1.6rem;
+  color: #555;
+}
+
+
+
+/* Desktop style */
+.intern-card {
+  flex-basis: calc(50% - 20px); 
+}
+
+/* Mobile style */
+@media (max-width: 768px) {
+  .intern-card {
+    flex-basis: 100%;
+    align-items: center;
+  }
+
+  .intern-card img {
+    
+    max-width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    margin-right: 20px;;
+  }
+}
+
+/* Kartu Organisasi */
+
+.organization-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.organization-card {
+  flex-basis: calc(50% - 20px); 
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.organization-card img {
+  max-width: 300px;
+  max-height: 100px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.organization-card__info {
+  flex-grow: 1;
+}
+
+
+
+/* Desktop style */
+.organization-card {
+  flex-basis: calc(50% - 20px); 
+}
+
+/* Mobile style */
+@media (max-width: 768px) {
+  .organization-card {
+    flex-basis: 100%;
+    align-items: center;
+  }
+
+  .organization-card img {
+    
+    max-width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    margin-right: 20px;;
+  }
+}
+
+
+
+
+
+
 
 
 /* Kartu Experience */
