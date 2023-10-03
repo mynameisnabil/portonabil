@@ -925,7 +925,8 @@ a {
   .contact .info {
     flex-direction: column-reverse;
     align-items: start;
-    
+    margin-left: 40px;
+
 
     
 
@@ -1170,9 +1171,10 @@ a {
 
 .education-card img {
   max-width: 150px;
-  height: auto;
+  max-height: 80px;
   border-radius: 5px;
   margin-right: 20px;
+  align-items: center;
 }
 
 .education-card__info {
