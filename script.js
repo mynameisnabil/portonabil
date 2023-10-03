@@ -9,6 +9,7 @@ const smMenuLink3 = document.querySelector('.main-header__sm-menu-link--3')
 const smMenuLink4 = document.querySelector('.main-header__sm-menu-link--4')
 const smMenuLink5 = document.querySelector('.main-header__sm-menu-link--5')
 const smMenuLink6 = document.querySelector('.main-header__sm-menu-link--6')
+const smMenuLink7 = document.querySelector('.main-header__sm-menu-link--7')
 
 smMenuBtn.addEventListener('click', () => {
   smMenu.style.transitionDelay = '0s'
@@ -38,33 +39,42 @@ smMenuBtn.addEventListener('click', () => {
   smMenuLink6.style.transform = 'translateY(0)'
   smMenuLink6.style.opacity = '1'
 
+  smMenuLink7.style.transitionDelay = '2.3s'
+  smMenuLink7.style.transform = 'translateY(0)'
+  smMenuLink7.style.opacity = '1'
+
 })
 
 smMenuLinks.forEach((ele) => {
   ele.addEventListener('click', () => {
 
-    smMenuLink5.style.transitionDelay = '0s'
-    smMenuLink5.style.transform = 'translateY(50px)'
-    smMenuLink5.style.opacity = '0'
+    smMenuLink7.style.transitionDelay = '0s'
+    smMenuLink7.style.transform = 'translateY(50px)'
+    smMenuLink7.style.opacity = '0'
 
-    smMenuLink6.style.transitionDelay = '.3s'
+
+    smMenuLink6.style.transitionDelay = '3s'
     smMenuLink6.style.transform = 'translateY(50px)'
     smMenuLink6.style.opacity = '0'
 
+    smMenuLink5.style.transitionDelay = '5s'
+    smMenuLink5.style.transform = 'translateY(50px)'
+    smMenuLink5.style.opacity = '0'
 
-    smMenuLink4.style.transitionDelay = '6s'
+
+    smMenuLink4.style.transitionDelay = '9s'
     smMenuLink4.style.transform = 'translateY(50px)'
     smMenuLink4.style.opacity = '0'
 
-    smMenuLink3.style.transitionDelay = '.9s'
+    smMenuLink3.style.transitionDelay = '12s'
     smMenuLink3.style.transform = 'translateY(50px)'
     smMenuLink3.style.opacity = '0'
 
-    smMenuLink2.style.transitionDelay = '.12s'
+    smMenuLink2.style.transitionDelay = '15s'
     smMenuLink2.style.transform = 'translateY(50px)'
     smMenuLink2.style.opacity = '0'
 
-    smMenuLink1.style.transitionDelay = '.15s'
+    smMenuLink1.style.transitionDelay = '18s'
     smMenuLink1.style.transform = 'translateY(50px)'
     smMenuLink1.style.opacity = '0'
 
@@ -80,27 +90,31 @@ smMenuLinks.forEach((ele) => {
 smMenuCloseBtn.addEventListener('click', () => {
 
 
-  smMenuLink6.style.transitionDelay = '0s'
+  smMenuLink7.style.transitionDelay = '0s'
+  smMenuLink7.style.transform = 'translateY(50px)'
+  smMenuLink7.style.opacity = '0'
+
+  smMenuLink6.style.transitionDelay = '3s'
   smMenuLink6.style.transform = 'translateY(50px)'
   smMenuLink6.style.opacity = '0'
 
-  smMenuLink5.style.transitionDelay = '3s'
-  smMenuLink5.style.transform = 'translateY(50px)'
+  smMenuLink5.style.transitionDelay = '6s'
+  smMenuLink5.style.transform = 'translat9eY(50px)'
   smMenuLink5.style.opacity = '0'
 
-  smMenuLink4.style.transitionDelay = '6s'
+  smMenuLink4.style.transitionDelay = '9s'
   smMenuLink4.style.transform = 'translateY(50px)'
   smMenuLink4.style.opacity = '0'
 
-  smMenuLink3.style.transitionDelay = '.9s'
+  smMenuLink3.style.transitionDelay = '12s'
   smMenuLink3.style.transform = 'translateY(50px)'
   smMenuLink3.style.opacity = '0'
 
-  smMenuLink2.style.transitionDelay = '.12s'
+  smMenuLink2.style.transitionDelay = '15s'
   smMenuLink2.style.transform = 'translateY(50px)'
   smMenuLink2.style.opacity = '0'
 
-  smMenuLink1.style.transitionDelay = '.15s'
+  smMenuLink1.style.transitionDelay = '18s'
   smMenuLink1.style.transform = 'translateY(50px)'
   smMenuLink1.style.opacity = '0'
 
