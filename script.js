@@ -209,6 +209,14 @@ function blujackcodelink() {
   window.location.href = "https://github.com/hanzayaim/MCS_LAB_FinalProject"
 }
 
+function scrollToProjects() {
+  document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+}
+
+function scrollToContact() {
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
+
 
 
 
