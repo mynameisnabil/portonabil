@@ -217,6 +217,19 @@ function scrollToContact() {
   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
 }
 
+function downloadPDF() {
+  var fileName = "assets/cvatsnabil.pdf"; 
+
+  var a = document.createElement("a");
+  a.href = fileName;
+  a.download = fileName;
+
+  a.click();
+}
+
+
+
+
 
 
 
