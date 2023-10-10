@@ -209,6 +209,14 @@ function blujackcodelink() {
   window.location.href = "https://github.com/hanzayaim/MCS_LAB_FinalProject"
 }
 
+function lecturnalivelink() {
+  window.location.href = "https://molokrakein.github.io/FinproMulmedV2/"
+}
+
+function lecturnacodelink() {
+  window.location.href = "https://github.com/MoloKrakein/FinproMulmedV2" 
+}
+
 function scrollToProjects() {
   document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
 }
