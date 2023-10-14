@@ -226,7 +226,7 @@ function scrollToContact() {
 }
 
 function downloadPDF() {
-  var fileName = "assets/cvatsnabil.pdf"; 
+  var fileName = "assets/NabilIzzaturrahmanResume.pdf"; 
 
   var a = document.createElement("a");
   a.href = fileName;
