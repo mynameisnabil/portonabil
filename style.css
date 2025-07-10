@@ -212,6 +212,10 @@ a {
 
 /* Main Header Stylings */
 
+:root {
+  --themeColor: 0, 123, 255; /* RGB warna biru */
+}
+
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -241,122 +245,6 @@ a {
   background: rgba(var(--themeColor), 1);
 }
 
-.main-header__sm-scr-nav-btn {
-  padding: 1rem 1rem;
-  display: none;
-  cursor: pointer;
-}
-
-@media (max-width: 37.5em) {
-  .main-header__sm-scr-nav-btn {
-    display: block;
-  }
-}
-
-.main-header__sm-scr-nav-btn-line {
-  height: 1px;
-  background: #000;
-  width: 3rem;
-  border-radius: 50px;
-}
-
-.main-header__sm-menu {
-  background: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 40rem;
-  transform: translateX(-100%);
-  transition: transform 0.5s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.main-header__sm-menu-close {
-  position: absolute;
-  top: 3.3rem;
-  right: 2.5rem;
-  width: 3rem;
-  height: 3rem;
-}
-
-.main-header__sm-menu-close:before,
-.main-header__sm-menu-close:after {
-  position: absolute;
-  content: ' ';
-  height: 3rem;
-  width: 1px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #000;
-}
-
-.main-header__sm-menu-close:before {
-  transform: rotate(45deg);
-}
-
-.main-header__sm-menu-close:after {
-  transform: rotate(-45deg);
-}
-
-.main-header__sm-menu--active {
-  transform: translateX(0);
-}
-
-.main-header__sm-menu-links {
-  width: 90%;
-}
-
-.main-header__sm-menu-link {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.3s, transform 0.3s;
-  font-size: 2.5rem;
-  text-align: center;
-  display: block;
-  padding: 3rem;
-  color: #555;
-}
-
-/* @keyframes smMenuLinkStartAnimation {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes smMenuLinkEndAnimation {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-} */
-
-.main-header__sm-scr-nav-btn-line:first-child {
-  margin-bottom: 8px;
-}
-
-@media (max-width: 37.5em) {
-  .main-header {
-    padding: 2.3rem 1.5rem;
-  }
-
-  .main-header__logo-img-cont {
-    margin-right: 1rem;
-  }
-}
-
 .main-header__logo-img {
   width: 100%;
   height: 100%;
@@ -379,10 +267,133 @@ a {
   padding: 1.3rem 2rem;
   font-size: 1.6rem;
   letter-spacing: 1px;
-  color: #000;
   font-weight: 400;
 }
 
+/* Tambahan animasi untuk link (desktop) */
+.main-header__navigation-link a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.main-header__navigation-link a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(var(--themeColor), 1);
+  transition: width 0.3s ease;
+}
+
+.main-header__navigation-link a:hover {
+  color: rgba(var(--themeColor), 1);
+}
+
+.main-header__navigation-link a:hover::after {
+  width: 100%;
+}
+
+.main-header__navigation-link a:active {
+  transform: scale(0.96);
+  transition: transform 0.1s ease;
+}
+
+/* Mobile Button */
+.main-header__sm-scr-nav-btn {
+  padding: 1rem 1rem;
+  display: none;
+  cursor: pointer;
+}
+
+.main-header__sm-scr-nav-btn-line {
+  height: 1px;
+  background: #000;
+  width: 3rem;
+  border-radius: 50px;
+}
+
+.main-header__sm-scr-nav-btn-line:first-child {
+  margin-bottom: 8px;
+}
+
+/* Mobile Menu */
+.main-header__sm-menu {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 40rem;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-header__sm-menu--active {
+  transform: translateX(0);
+}
+
+.main-header__sm-menu-close {
+  position: absolute;
+  top: 3.3rem;
+  right: 2.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.main-header__sm-menu-close:before,
+.main-header__sm-menu-close:after {
+  position: absolute;
+  content: ' ';
+  height: 3rem;
+  width: 1px;
+  left: 50%;
+  background-color: #000;
+}
+
+.main-header__sm-menu-close:before {
+  transform: rotate(45deg);
+}
+
+.main-header__sm-menu-close:after {
+  transform: rotate(-45deg);
+}
+
+.main-header__sm-menu-links {
+  width: 90%;
+}
+
+.main-header__sm-menu-link {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.3s, transform 0.3s;
+  font-size: 2.5rem;
+  text-align: center;
+  display: block;
+  padding: 3rem;
+  color: #555;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.main-header__sm-menu-link:hover {
+  color: rgba(var(--themeColor), 1);
+  transform: translateY(-5px);
+}
+
+.main-header__sm-menu-link:active {
+  transform: scale(0.97);
+}
+
+/* Responsive */
 @media (max-width: 56.25em) {
   .main-header__navigation-link {
     padding: 1.3rem 1.5rem;
@@ -390,8 +401,20 @@ a {
 }
 
 @media (max-width: 37.5em) {
+  .main-header {
+    padding: 2.3rem 1.5rem;
+  }
+
+  .main-header__logo-img-cont {
+    margin-right: 1rem;
+  }
+
   .main-header__navigation-links {
     display: none;
+  }
+
+  .main-header__sm-scr-nav-btn {
+    display: block;
   }
 }
 
@@ -1159,65 +1182,63 @@ a {
 }
 
 .education-card {
-  flex-basis: calc(50% - 20px); 
+  flex-basis: calc(50% - 20px);
   margin-bottom: 20px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
   display: flex;
+  align-items: center; /* ✅ ini yang bikin gambar dan teks sejajar tengah */
+  gap: 16px;           /* Jarak antar gambar dan teks */
 }
 
 .education-card img {
-  max-width: 150px;
-  max-height: 80px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   border-radius: 5px;
-  margin-right: 20px;
-  align-items: center;
 }
 
 .education-card__info {
   flex-grow: 1;
 }
 
+/* Typography */
 .school-name {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .school-year {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #777;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .school-description {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #555;
+  line-height: 1.6;
 }
 
-/* Desktop style */
-.education-card {
-  flex-basis: calc(50% - 20px); 
-}
-
-/* Mobile style */
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 600px) {
   .education-card {
     flex-basis: 100%;
+    flex-direction: row;
     align-items: center;
   }
 
   .education-card img {
-    
-    max-width: 50%;
-    height: 50%;
-    border-radius: 5px;
-    margin-right: 20px;;
+    width: 60px;
+    height: 60px;
   }
 }
+
 
 /* Kartu Intern */
 
@@ -1237,6 +1258,7 @@ a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+  gap: 16px; 
 
 }
 
@@ -1264,11 +1286,14 @@ a {
   margin-bottom: 10px;
 }
 
+
 .company-description {
-  font-size: 1.6rem;
+  font-size: 0.85 rem;
+  line-height: 1.4;
   color: #555;
-  letter-spacing: 1px;
+
 }
+
 
 
 
@@ -1278,20 +1303,27 @@ a {
 }
 
 /* Mobile style */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .intern-card {
     flex-basis: 100%;
     align-items: center;
+    display: flex; /* pastikan horizontal layout tetap terjaga */
+    gap: 16px;     /* jarak antar gambar dan teks */
   }
 
   .intern-card img {
-    
-    max-width: 50%;
-    height: 50%;
+    width: 60px;            /* ukuran tetap */
+    height: 60px;           /* ukuran tetap */
+    object-fit: contain;    /* menjaga proporsi logo */
     border-radius: 5px;
-    margin-right: 20px;;
+    margin: 0;              /* hapus margin-right agar konsisten dengan gap */
+  }
+
+  .intern-card__info {
+    flex: 1;                /* pastikan deskripsi mengisi ruang sisa */
   }
 }
+
 
 /* Kartu Organisasi */
 
@@ -1301,6 +1333,7 @@ a {
   flex-wrap: wrap;
 }
 
+/* Card Style */
 .organization-card {
   flex-basis: calc(50% - 20px); 
   margin-bottom: 20px;
@@ -1311,41 +1344,40 @@ a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 
+/* Gambar */
+.intern-card img,
 .organization-card img {
-  max-width: 150px;
-  max-height: 50px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   border-radius: 5px;
-  margin-right: 20px;
+  margin-right: 0; /* margin-right tidak dibutuhkan karena sudah pakai gap */
 }
 
+/* Kontainer teks */
 .organization-card__info {
   flex-grow: 1;
-  align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.85rem; /* Menyamakan ukuran teks */
 }
 
-
-
-/* Desktop style */
-.organization-card {
-  flex-basis: calc(50% - 20px); 
-}
-
-/* Mobile style */
-@media (max-width: 768px) {
+/* Responsive - Mobile */
+@media (max-width: 600spx) {
   .organization-card {
     flex-basis: 100%;
+    flex-direction: row;
     align-items: center;
+    gap: 16px;
   }
 
   .organization-card img {
-    
-    max-width: 50%;
-    height: 50%;
-    border-radius: 5px;
-    margin-right: 20px;;
+    width: 60px;
+    height: 60px;
   }
 }
 

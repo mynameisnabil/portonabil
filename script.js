@@ -197,6 +197,17 @@ function hobbyHiveCodeLinkClick() {
 
 }
 
+function myPolytronAppstoreLinkClick() {
+  window.location.href = "https://apps.apple.com/us/app/my-polytron/id6670424893";
+}
+
+function myPolytronPlaystoreLinkClick() {
+  window.location.href = "https://play.google.com/store/apps/details?id=com.polytron.mypolytron&hl=id";
+}
+
+function ruhArabiaCodeLink() {
+  window.location.href = "https://github.com/mynameisnabil/hackathon_saudi"
+}
 function acaraseruAppsLinkClick() {
   window.location.href = "https://play.google.com/store/apps/details?id=id.or.acci.event&hl=en-ID"
 }
