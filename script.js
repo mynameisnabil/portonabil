@@ -237,7 +237,7 @@ function scrollToContact() {
 }
 
 function downloadPDF() {
-  var fileName = "assets/CV_Nabil_2025.pdf"; 
+  var fileName = "assets/CV_Nabil_2025_Update.pdf"; 
 
 
 
