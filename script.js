@@ -216,6 +216,10 @@ function blazebusterDemolinkClick() {
   window.location.href = "https://youtu.be/gDlsl0t8bmc"
 }
 
+function ApiCodeLink() {
+  window.location.href = "https://github.com/mynameisnabil/katsikat-api-recruitment"
+}
+
 function blujackcodelink() {
   window.location.href = "https://github.com/hanzayaim/MCS_LAB_FinalProject"
 }
