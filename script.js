@@ -241,7 +241,7 @@ function scrollToContact() {
 }
 
 function downloadPDF() {
-  var fileName = "assets/CV_Nabil_new_2025.pdf"; 
+  var fileName = "assets/CV_Nabil_Izzaturrahman_Update.pdf"; 
 
 
 
