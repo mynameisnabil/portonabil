@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleTheme }) => {
       <div className={styles.container}>
         <div className={styles.logoContainer}>
           <div className={styles.logoImageContainer}>
-            <img src="/assets/nabil.png" alt="Nabil Izzaturrahman" className={styles.logoImg} />
+            <img src="./assets/nabil.png" alt="Nabil Izzaturrahman" className={styles.logoImg} />
           </div>
           <span className={styles.logoText}>Nabil Izzaturrahman</span>
         </div>

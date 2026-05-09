@@ -8,21 +8,21 @@ const Education: React.FC = () => {
       location: 'Indonesia',
       degree: 'RPL Vocational Student | 2018 – 2021',
       description: 'Studied mobile development fundamentals, focusing on Java and Kotlin for Android applications.',
-      logo: '/assets/idn_logo.png'
+      logo: './assets/idn_logo.png'
     },
     {
       school: 'Binus University',
       location: 'Indonesia',
       degree: 'B.Sc. Computer Science | 2021 – Present (GPA: 3.69)',
       description: 'Major in Computer Science with a specialization in Mobile Applications. Actively developing projects using Flutter, Java, Kotlin, and backend technologies like Node.js and JavaScript, while awaiting thesis defense.',
-      logo: '/assets/binus_logo.png'
+      logo: './assets/binus_logo.png'
     },
     {
       school: 'King Abdulaziz University',
       location: 'Saudi Arabia',
       degree: 'Associate Degree in Arabic Language | 2025 – Present',
       description: 'Recipient of a Saudi Government scholarship under the Ma’had Lughoh Program. Attending part-time Arabic language classes (2–4 hours/day) at King Abdulaziz University in Jeddah, Saudi Arabia. Gaining valuable academic and cultural experience in an international setting.',
-      logo: '/assets/logo_kau2.png'
+      logo: './assets/logo_kau2.png'
     }
   ];
 

@@ -38,7 +38,7 @@ const About: React.FC = () => {
               </p>
             </div>
             
-            <a href="/assets/CV_Nabil_Izzaturrahman_Update.pdf" download className="btn btn-primary" style={{ marginTop: '1rem' }}>
+            <a href="./assets/CV_Nabil_Izzaturrahman_Update.pdf" download className="btn btn-primary" style={{ marginTop: '1rem' }}>
               <Download size={18} /> Download CV
             </a>
           </div>

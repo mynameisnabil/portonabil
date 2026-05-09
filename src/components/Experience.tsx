@@ -7,7 +7,7 @@ const Experience: React.FC = () => {
       company: 'Polytron Indonesia',
       role: 'Application Developer Internship',
       period: 'Feb 2024 - Feb 2025',
-      logo: '/assets/polytron_logo.png',
+      logo: './assets/polytron_logo.png',
       tasks: [
         'Developed and maintained the MyPolytron app using Flutter (Play Store & App Store)',
         'Contributed to MyPolytron API using Node.js and JavaScript',
@@ -21,7 +21,7 @@ const Experience: React.FC = () => {
       company: 'Indi Technology',
       role: 'Android Developer Internship',
       period: 'Jun 2019 - Agustus 2019',
-      logo: '/assets/indi_logo_new2.png',
+      logo: './assets/indi_logo_new2.png',
       tasks: [
         'Built New feature on getcrew app',
         'Fixing bug on getcrew app'
@@ -32,7 +32,7 @@ const Experience: React.FC = () => {
       company: 'Asosiasi Cloud Computing indonesia',
       role: 'Android Developer Internship',
       period: 'Sep 2019 - Nov 2019',
-      logo: '/assets/acci_logo_new2.png',
+      logo: './assets/acci_logo_new2.png',
       tasks: [
         'Create new build variant',
         'Layouting on ACCI App',
@@ -47,7 +47,7 @@ const Experience: React.FC = () => {
       name: 'Bina Nusantara Computer Club',
       role1: 'Activis LnT | Des 2021 - Jan 2023',
       role2: 'Staff LnT | Feb 2023 - Present',
-      logo: '/assets/bncc_logo.png',
+      logo: './assets/bncc_logo.png',
       tasks: [
         'Committee BNCC Launching 2022',
         'Committee BNCC CSR 2022',

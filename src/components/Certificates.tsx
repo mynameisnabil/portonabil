@@ -7,31 +7,31 @@ const Certificates: React.FC = () => {
     {
       title: 'AI Praktis untuk Produktivitas by dicoding',
       category: 'Programming Course',
-      image: '/assets/ss_certif_4.png',
+      image: './assets/ss_certif_4.png',
       link: 'https://www.dicoding.com/certificates/JMZVVQ2K3ZN9'
     },
     {
       title: 'Belajar Penggunaan Generative AI by dicoding',
       category: 'Programming Course',
-      image: '/assets/ss_certif_5.png',
+      image: './assets/ss_certif_5.png',
       link: 'https://www.dicoding.com/certificates/JMZVVQ2K3ZN9'
     },
     {
       title: 'Belajar Membuat Aplikasi Android untuk Pemula by dicoding',
       category: 'Programming Course',
-      image: '/assets/ss-sertif1.png',
+      image: './assets/ss-sertif1.png',
       link: 'https://www.dicoding.com/certificates/EYX4RQDJ5XDL'
     },
     {
       title: 'Memulai Pemrograman dengan Java by dicoding',
       category: 'Programming Course',
-      image: '/assets/ss-sertif2.png',
+      image: './assets/ss-sertif2.png',
       link: 'https://www.dicoding.com/certificates/0LZ0GG28RX65'
     },
     {
       title: 'Memulai Pemrograman dengan Dart by dicoding',
       category: 'Programming Course',
-      image: '/assets/ss-sertif3.png',
+      image: './assets/ss-sertif3.png',
       link: 'https://www.dicoding.com/certificates/1OP8126Q1ZQK'
     }
   ];
