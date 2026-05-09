@@ -1,0 +1,56 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 5rem; /* offset for header */
+}
+
+.heroContent {
+  animation: downToUp 0.8s ease-out forwards;
+}
+
+@keyframes downToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info {
+  max-width: 900px;
+}
+
+.greeting {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.mainHeading {
+  display: block;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: 80vh;
+  }
+  .ctaGroup {
+    flex-direction: column;
+  }
+  .ctaGroup a {
+    width: 100%;
+    text-align: center;
+  }
+}
