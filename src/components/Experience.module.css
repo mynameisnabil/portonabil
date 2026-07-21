@@ -1,5 +1,6 @@
 .experience {
-  /* No special background, uses index.css base */
+  padding: 4rem 0;
+  position: relative;
 }
 
 .headingSm {
@@ -18,46 +19,137 @@
   margin: 0 auto;
 }
 
-.content {
-  margin-top: 4rem;
+/* Tab Filter Buttons */
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0;
 }
 
-.sectionTitle {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: var(--primary);
-  color: white;
-  border-radius: 0.5rem;
+.tabBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background: var(--card-bg, rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+.tabBtn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.activeTab {
+  background: var(--primary) !important;
+  color: white !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.25);
+}
+
+.tabBadge {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.08);
+  color: currentColor;
+}
+
+.activeTab .tabBadge {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Timeline Layout */
+.timelineContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.timelineMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 24px;
+  flex-shrink: 0;
+  padding-top: 1.25rem;
+}
+
+.timelineDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--bg-main, #ffffff);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  z-index: 2;
+}
+
+.timelineLine {
+  width: 2px;
+  flex-grow: 1;
+  background: linear-gradient(to bottom, var(--primary) 0%, var(--border) 100%);
+  margin-top: 6px;
+}
+
+/* Experience Card Styling */
+.experienceCard {
+  flex-grow: 1;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.experienceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary);
 }
 
 .cardHeader {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  align-items: flex-start;
+  gap: 1.25rem;
   margin-bottom: 1.5rem;
 }
 
 .logoCont {
-  width: 60px;
-  height: 60px;
-  border-radius: 0.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 0.85rem;
   overflow: hidden;
   background-color: white;
-  padding: 0.5rem;
+  padding: 0.4rem;
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .logoCont img {
@@ -66,42 +158,130 @@
   object-fit: contain;
 }
 
+.darkLogoCont {
+  background-color: #000000 !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.headerInfo {
+  flex-grow: 1;
+}
+
+.companyRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .companyName {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 0.25rem;
-}
-
-.role {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
-.taskList {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
   color: var(--text-main);
-  font-size: 0.95rem;
 }
 
-.taskList li {
-  margin-bottom: 0.5rem;
-}
-
-.skillsSection {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
-}
-
-.skillsTitle {
+.periodBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.825rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
-.skills {
+.roleTitle {
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text-muted);
-  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Tasks */
+.taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.taskItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.taskIcon {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+/* Tech Stack Skill Badges */
+.skillsContainer {
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--border);
+}
+
+.skillsLabel {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skillBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skillTag {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.5rem;
+  background: rgba(59, 130, 246, 0.05);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.skillTag:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .timelineItem {
+    gap: 0.75rem;
+  }
+  .companyRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .experienceCard {
+    padding: 1.25rem;
+  }
+  .tabContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tabBtn {
+    justify-content: center;
+  }
 }

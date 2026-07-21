@@ -1,5 +1,6 @@
 .education {
-  background-color: var(--bg-card);
+  padding: 4rem 0;
+  position: relative;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -20,35 +21,89 @@
   margin: 0 auto;
 }
 
-.content {
-  margin-top: 4rem;
+/* Timeline Layout */
+.timelineContainer {
+  max-width: 900px;
+  margin: 3rem auto 0 auto;
+  position: relative;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.timelineMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 24px;
+  flex-shrink: 0;
+  padding-top: 1.25rem;
+}
+
+.timelineDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--bg-main, #ffffff);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  z-index: 2;
+}
+
+.timelineLine {
+  width: 2px;
+  flex-grow: 1;
+  background: linear-gradient(to bottom, var(--primary) 0%, var(--border) 100%);
+  margin-top: 6px;
+}
+
+/* Education Card Styling */
+.educationCard {
+  flex-grow: 1;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.educationCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary);
 }
 
 .cardHeader {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  align-items: flex-start;
+  gap: 1.25rem;
   margin-bottom: 1.5rem;
 }
 
 .logoCont {
-  width: 60px;
-  height: 60px;
-  border-radius: 0.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 0.85rem;
   overflow: hidden;
-  background-color: white;
-  padding: 0.5rem;
+  background-color: #ffffff;
+  padding: 0.4rem;
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .logoCont img {
@@ -57,26 +112,152 @@
   object-fit: contain;
 }
 
+.darkLogoCont {
+  background-color: #000000 !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.headerInfo {
+  flex-grow: 1;
+}
+
+.schoolRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .schoolName {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 0.25rem;
-}
-
-.location {
-  font-size: 0.875rem;
-  color: var(--primary);
-  font-weight: 500;
-  margin-bottom: 0.25rem;
-}
-
-.degree {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
-.description {
   color: var(--text-main);
+}
+
+.badgeGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.periodBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.gpaBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.degreeTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.locationText {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Highlights List */
+.highlightsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
   font-size: 0.95rem;
   line-height: 1.6;
+  color: var(--text-main);
+}
+
+.itemIcon {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+/* Course / Skill Badges */
+.coursesContainer {
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--border);
+}
+
+.coursesLabel {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.courseBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.courseTag {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.5rem;
+  background: rgba(59, 130, 246, 0.05);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.courseTag:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .timelineItem {
+    gap: 0.75rem;
+  }
+  .schoolRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .educationCard {
+    padding: 1.25rem;
+  }
 }

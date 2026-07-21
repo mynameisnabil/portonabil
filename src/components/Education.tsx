@@ -1,28 +1,56 @@
 import React from 'react';
 import styles from './Education.module.css';
+import { Calendar, MapPin, CheckCircle2, Award } from 'lucide-react';
 
 const Education: React.FC = () => {
   const educationList = [
     {
-      school: 'IDN Boarding School',
-      location: 'Indonesia',
-      degree: 'RPL Vocational Student | 2018 – 2021',
-      description: 'Studied mobile development fundamentals, focusing on Java and Kotlin for Android applications.',
-      logo: './assets/idn_logo.png'
-    },
-    {
-      school: 'Binus University',
-      location: 'Indonesia',
-      degree: 'B.Sc. Computer Science | 2021 – Present (GPA: 3.69)',
-      description: 'Major in Computer Science with a specialization in Mobile Applications. Actively developing projects using Flutter, Java, Kotlin, and backend technologies like Node.js and JavaScript, while awaiting thesis defense.',
-      logo: './assets/binus_logo.png'
-    },
-    {
       school: 'King Abdulaziz University',
-      location: 'Saudi Arabia',
-      degree: 'Associate Degree in Arabic Language | 2025 – Present',
-      description: 'Recipient of a Saudi Government scholarship under the Ma’had Lughoh Program. Attending part-time Arabic language classes (2–4 hours/day) at King Abdulaziz University in Jeddah, Saudi Arabia. Gaining valuable academic and cultural experience in an international setting.',
-      logo: './assets/logo_kau2.png'
+      location: 'Jeddah, Saudi Arabia',
+      degree: 'Associate Degree in Arabic Language',
+      period: '2025 – 2026',
+      logo: './assets/logo_kau2.png',
+      darkLogo: false,
+      highlights: [
+        'Recipient of Saudi Government Scholarship under the Ma’had Lughoh Program.',
+        'Attending intensive Arabic language & literature classes (2–4 hours/day) at KAU in Jeddah.',
+        'Gaining valuable academic, cultural, and international experience in Saudi Arabia.'
+      ],
+      courses: ['Arabic Language', 'Linguistics', 'Arabic Culture', 'Cross-Cultural Communication']
+    },
+    {
+      school: 'Bina Nusantara University',
+      location: 'Jakarta, Indonesia',
+      degree: 'Bachelor of Computer Science (B.Comp.Sc.)',
+      period: 'Sep 2021 – Sep 2025',
+      gpa: 'GPA: 3.67 / 4.00',
+      logo: './assets/binus_logo.png',
+      darkLogo: false,
+      highlights: [
+        'Specialization in Mobile Applications & Technology with a strong foundation in software engineering.',
+        'Thesis Title: "IMPLEMENTATION OF AN RECRUITMENT SYSTEM BASED ON WEB FOR HR PROCESS EFFICIENCY."'
+      ],
+      courses: [
+        'Algorithm & Programming',
+        'Data Structures',
+        'Object-Oriented Programming (OOP)',
+        'Mobile Programming',
+        'Web Programming',
+        'Artificial Intelligence'
+      ]
+    },
+    {
+      school: 'IDN Boarding School',
+      location: 'Bogor, Indonesia',
+      degree: 'Software Engineering (RPL) Vocational Diploma',
+      period: '2018 – 2021',
+      logo: './assets/idn_logo.png',
+      darkLogo: false,
+      highlights: [
+        'Studied mobile and web software engineering fundamentals.',
+        'Hands-on experience building native Android applications using Java and Kotlin.'
+      ],
+      courses: ['Android Development', 'Java', 'Kotlin', 'Web Fundamentals', 'Database Systems']
     }
   ];
 
@@ -32,25 +60,70 @@ const Education: React.FC = () => {
         <h2 className="heading-secondary">
           <span className={styles.headingSm}>Education 📚</span>
           <span className={styles.headingMain}>
-            Here you can find information about my educational background.
+            My academic journey and educational background in computer science and international studies.
           </span>
         </h2>
 
-        <div className={styles.content}>
-          <div className={styles.grid}>
-            {educationList.map((edu, index) => (
-              <div key={index} className="card">
-                <div className={styles.cardHeader}>
-                  <div className={styles.logoCont}>
-                    <img src={edu.logo} alt={edu.school} />
-                  </div>
-                  <div>
-                    <h4 className={styles.schoolName}>{edu.school}</h4>
-                    <p className={styles.location}>{edu.location}</p>
-                    <p className={styles.degree}>{edu.degree}</p>
-                  </div>
+        <div className={styles.timelineContainer}>
+          <div className={styles.timeline}>
+            {educationList.map((edu: any, index: number) => (
+              <div key={index} className={styles.timelineItem}>
+                <div className={styles.timelineMarker}>
+                  <div className={styles.timelineDot} />
+                  {index !== educationList.length - 1 && <div className={styles.timelineLine} />}
                 </div>
-                <p className={styles.description}>{edu.description}</p>
+
+                <div className={`${styles.educationCard} glass`}>
+                  <div className={styles.cardHeader}>
+                    <div className={`${styles.logoCont} ${edu.darkLogo ? styles.darkLogoCont : ''}`}>
+                      <img src={edu.logo} alt={edu.school} />
+                    </div>
+                    <div className={styles.headerInfo}>
+                      <div className={styles.schoolRow}>
+                        <h3 className={styles.schoolName}>{edu.school}</h3>
+                        <div className={styles.badgeGroup}>
+                          {edu.gpa && (
+                            <span className={styles.gpaBadge}>
+                              <Award size={14} />
+                              {edu.gpa}
+                            </span>
+                          )}
+                          <span className={styles.periodBadge}>
+                            <Calendar size={14} />
+                            {edu.period}
+                          </span>
+                        </div>
+                      </div>
+                      <p className={styles.degreeTitle}>{edu.degree}</p>
+                      <p className={styles.locationText}>
+                        <MapPin size={13} />
+                        {edu.location}
+                      </p>
+                    </div>
+                  </div>
+
+                  <ul className={styles.highlightsList}>
+                    {edu.highlights.map((highlight: string, i: number) => (
+                      <li key={i} className={styles.highlightItem}>
+                        <CheckCircle2 size={16} className={styles.itemIcon} />
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {edu.courses && edu.courses.length > 0 && (
+                    <div className={styles.coursesContainer}>
+                      <span className={styles.coursesLabel}>Key Focus & Coursework:</span>
+                      <div className={styles.courseBadges}>
+                        {edu.courses.map((course: string, i: number) => (
+                          <span key={i} className={styles.courseTag}>
+                            {course}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
