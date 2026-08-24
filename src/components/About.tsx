@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './About.module.css';
-import { Download } from 'lucide-react';
 
 const About: React.FC = () => {
   const skills = [
