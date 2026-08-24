@@ -34,9 +34,9 @@ const About: React.FC = () => {
               </p>
             </div>
 
-            <a href="./assets/Nabil_CV_Juli_2026.pdf" download className="btn btn-primary" style={{ marginTop: '1rem' }}>
+            {/* <a href="./assets/Nabil_CV_Juli_2026.pdf" download className="btn btn-primary" style={{ marginTop: '1rem' }}>
               <Download size={18} /> Download CV
-            </a>
+            </a> */}
           </div>
 
           <div className={styles.skillsInfo}>

@@ -5,6 +5,12 @@ import { Eye } from 'lucide-react';
 const Certificates: React.FC = () => {
   const certificates = [
     {
+      title: 'Business Analysis & Process Management ',
+      category: 'Business Course',
+      image: './assets/bisnis-1.png',
+      link: 'https://coursera.org/share/ab8747faf122370614329fa508631b0d'
+    },
+    {
       title: 'AI Praktis untuk Produktivitas by dicoding',
       category: 'Programming Course',
       image: './assets/ss_certif_4.png',
@@ -15,12 +21,6 @@ const Certificates: React.FC = () => {
       category: 'Programming Course',
       image: './assets/ss_certif_5.png',
       link: 'https://www.dicoding.com/certificates/JMZVVQ2K3ZN9'
-    },
-    {
-      title: 'Belajar Membuat Aplikasi Android untuk Pemula by dicoding',
-      category: 'Programming Course',
-      image: './assets/ss-sertif1.png',
-      link: 'https://www.dicoding.com/certificates/EYX4RQDJ5XDL'
     },
     {
       title: 'Memulai Pemrograman dengan Java by dicoding',

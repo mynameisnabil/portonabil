@@ -5,20 +5,6 @@ import { Calendar, MapPin, CheckCircle2, Award } from 'lucide-react';
 const Education: React.FC = () => {
   const educationList = [
     {
-      school: 'King Abdulaziz University',
-      location: 'Jeddah, Saudi Arabia',
-      degree: 'Associate Degree in Arabic Language',
-      period: '2025 – 2026',
-      logo: './assets/logo_kau2.png',
-      darkLogo: false,
-      highlights: [
-        'Recipient of Saudi Government Scholarship under the Ma’had Lughoh Program.',
-        'Attending intensive Arabic language & literature classes (2–4 hours/day) at KAU in Jeddah.',
-        'Gaining valuable academic, cultural, and international experience in Saudi Arabia.'
-      ],
-      courses: ['Arabic Language', 'Linguistics', 'Arabic Culture', 'Cross-Cultural Communication']
-    },
-    {
       school: 'Bina Nusantara University',
       location: 'Jakarta, Indonesia',
       degree: 'Bachelor of Computer Science (B.Comp.Sc.)',
