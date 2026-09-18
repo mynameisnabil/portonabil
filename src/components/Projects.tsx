@@ -6,9 +6,8 @@ const Projects: React.FC = () => {
     {
       title: 'API Katsikat Recruitment Apps',
       description: 'This API was developed for Rekrutmen Katsikat, a web-based recruitment system designed to solve the inefficient hiring process for Katsikat, a growing small business specializing in shoe care. The system introduces a unique e-learning approach where the company\'s HR team can upload training materials and create evaluation quizzes. This allows them to objectively assess candidates\' skills and ensure they meet company standards before hiring. On this project, I worked as the Backend Developer, responsible for engineering the core RESTful API. I built the API using Node.js and the Express.js framework, with MySQL for the database.',
-      image: './assets/Katsikat_Api.png',
+      image: './assets/Katsikat_ui.png',
       links: [
-        { label: 'Code Link', url: 'https://github.com/mynameisnabil/katsikat-api-recruitment', type: 'primary' }
       ],
       reverse: false
     },
@@ -97,11 +96,11 @@ const Projects: React.FC = () => {
                 <p className="text-primary">{project.description}</p>
                 <div className={styles.projectLinks}>
                   {project.links.map((link, i) => (
-                    <a 
-                      key={i} 
-                      href={link.url} 
-                      target="_blank" 
-                      rel="noreferrer" 
+                    <a
+                      key={i}
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
                       className={`btn ${link.type === 'primary' ? 'btn-primary' : 'btn-outline'}`}
                     >
                       {link.label}
